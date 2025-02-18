@@ -1,0 +1,94 @@
+/* Container */
+.container {
+    background-color: white;
+    padding: 16px;
+    max-height: 400px;
+    overflow-y: auto;
+    display: block;
+}
+
+/* Time and Greeting */
+.time {
+    font-size: 4rem;
+    font-weight: 600;
+}
+.greeting {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+/* Todo Item Styles */
+.todo-item {
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: uppercase;
+}
+
+/* UPCOMING Tasks (Red) */
+.upcoming {
+    background-color: #ff6666; /* Strong Red */
+    color: white;
+    border-left: 5px solid #b30000; /* Darker Red */
+    box-shadow: 2px 2px 10px rgba(255, 0, 0, 0.3);
+}
+
+.upcoming:hover {
+    background-color: #ff4d4d; /* Lighter Red */
+    cursor: pointer;
+}
+
+/* COMPLETED Tasks (Blue) */
+.completed {
+    background-color: #007bff; /* Strong Blue */
+    color: white;
+    border-left: 5px solid #0056b3; /* Darker Blue */
+    box-shadow: 2px 2px 10px rgba(0, 0, 255, 0.3);
+    opacity: 0;
+    transform: translateY(-20px) scale(0.8);
+    animation: slideDown 0.5s ease-out forwards;
+}
+
+/* Animation for Completed Task */
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Button Styling */
+.button-container {
+    display: flex;
+    gap: 8px;
+}
+
+.check-button {
+    background-color: white;
+    color: green;
+    border-radius: 50%;
+}
+
+.delete-button {
+    background-color: white;
+    color: red;
+    border-radius: 50%;
+}
+
+.check-button:hover {
+    background-color: #b3ffb3;
+}
+
+.delete-button:hover {
+    background-color: #ffd6d6;
+}
